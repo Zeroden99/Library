@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
+  before_action :authenticate_user! 
   def index
-  	@book = Book.all
+  	#@books = Book.all
   end
 end

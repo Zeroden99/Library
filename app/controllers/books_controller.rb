@@ -5,7 +5,7 @@ class BooksController < ApplicationController
   end 
 
   def new
-  	@books = Book.new
+  	@book = Book.new
   end
   
 
@@ -27,7 +27,7 @@ class BooksController < ApplicationController
   end
 
   def private
-  	def set_book
+  	def find_book
   		@book = Book.find(params[:id])
   end 
 
