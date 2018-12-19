@@ -2,4 +2,6 @@
 Name: <%= current_user.userparam.name %><br />
 Surname: <%= current_user.userparam.surname %><br />
 Age: <%= current_user.userparam.age %><br />
-<%= link_to "edit", edit_userparam_path(current_user.id) %><br />
+<%= link_to "Edit", edit_userparam_path(current_user.id) %><br />
+<%= link_to "Edit Password", edit_user_registration_path(current_user.id) %><br />
+

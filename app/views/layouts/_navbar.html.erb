@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   <%= link_to "Home", root_path %> |
   <%= link_to "New Book", new_book_path %> |
-  <%= link_to "Photo Gallery",  books_path %> |
+  <%= link_to "Books Gallery",  books_path %> |
    <% if current_user.userparam.nil? %>
   
      <%= link_to "Profile", new_userparam_path %> |
