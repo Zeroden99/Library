@@ -14,6 +14,7 @@ class BooksController < ApplicationController
     @book = current_user.books.build(book_params)
     if @book.save
       redirect_to root_path
+    else render 'new'
    
     end  
   end
@@ -29,6 +30,7 @@ class BooksController < ApplicationController
     if @book.update(book_params)
      
       redirect_to book_path(@book.id)
+    else render 'edit'
    
     end
     
