@@ -2,7 +2,9 @@ User: <%= @book.user.email %><br />
 Name: <%= @book.name %><br />
 Body: <%= @book.body %><br />
 
-
+<% @book.libraries.each do |b| %>
+  <%= link_to "Download", b.url %>
+<% end %>
 <% if @book.user_id == current_user.id %>
 <p><%= link_to "edit", edit_book_path(@book.id) %> |
 <%= link_to "delete", book_path(@book.id), method: :delete %><br /></p>
