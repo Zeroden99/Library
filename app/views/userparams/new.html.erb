@@ -1,2 +1,19 @@
-<h1>Userparams#new</h1>
-<p>Find me in app/views/userparams/new.html.erb</p>
+<%= form_for @userparam, url: userparams_path do |f| %>
+
+<% if @userparam.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@userparam.errors.count, "error") %> prohibited this post from being saved:</h2>
+ 
+    <ul>
+    <% @userparam.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+  Name: <%= f.text_field :name %><br />
+  Surname: <%= f.text_field :surname %><br />
+  Age: <%= f.text_field :age %><br />
+  <%= f.submit "Create" %>
+<% end %>
