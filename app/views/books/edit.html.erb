@@ -11,6 +11,7 @@
 <% end %>
 <%= form_for @book, url: book_path(@book.id) do |f| %>
 
+<%= f.file_field :photo %><br><br>
 
 
   <%= f.text_field :name %><br />

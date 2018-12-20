@@ -1,8 +1,10 @@
 User: <%= @book.user.email %><br />
 Name: <%= @book.name %><br />
 Body: <%= @book.body %><br />
-
+<%=image_tag@book.image.url(:medium) %><br />
+ 
 <% @book.libraries.each do |b| %>
+
   <%= link_to "Download", b.url %>
 <% end %>
 <% if @book.user_id == current_user.id %>

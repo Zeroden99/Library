@@ -44,7 +44,7 @@ class BooksController < ApplicationController
 private
 
   def book_params
-    params.require(:book).permit(:user_id, :name, :body, {libraries: []})
+    params.require(:book).permit(:user_id, :name, :body, :image, {libraries: []})
   end
   
   def find_book
