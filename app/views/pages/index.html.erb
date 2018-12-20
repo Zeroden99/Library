@@ -3,8 +3,9 @@
 <% else %>
     <% @books.each do |book| %>
        <p>User
-	    
+
        	<b><%= book.user.email %></b> write: <br />
+	  <p><b> <%=image_tag book.image.url(:medium) %><br /></b>	
        <b><%= book.name %></b><br />
        <%= book.body %></p>
        <p><%= link_to "Read More", book_path(book.id) %></p>
