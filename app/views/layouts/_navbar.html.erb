@@ -4,7 +4,7 @@
   
    <% if current_user.userparam.nil? %>
   
-    <%= link_to "Profile", new_userparam_path %>
+   <h3><%= link_to "Profile", new_userparam_path %></h3>
   <% else %>
   <h3> <%= link_to "Profile", userparam_path(current_user.id) %> </h3>
   <% end %>
