@@ -1,4 +1,4 @@
-User: <%= @book.user.email %><br />
+<Center><h3>User: <%= @book.user.email %><br />
 Name: <%= @book.name %><br />
 Body: <%= @book.body %><br />
 <%=image_tag@book.image.url(:medium) %><br />
@@ -10,4 +10,4 @@ Body: <%= @book.body %><br />
 <% if @book.user_id == current_user.id %>
 <p><%= link_to "edit", edit_book_path(@book.id) %> |
 <%= link_to "delete", book_path(@book.id), method: :delete %><br /></p>
-<% end %>
+<% end %></h3></Center>

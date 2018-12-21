@@ -1,16 +1,16 @@
 <% if user_signed_in? %>
-  <%= link_to "Home", root_path %> |
-  <%= link_to "New Book", new_book_path %> |
+ <h3> <%= link_to "Home", root_path %> 
+  <%= link_to "New Book", new_book_path %></h3> 
   
    <% if current_user.userparam.nil? %>
   
-     <%= link_to "Profile", new_userparam_path %> |
+    <%= link_to "Profile", new_userparam_path %>
   <% else %>
-   <%= link_to "Profile", userparam_path(current_user.id) %> |
+  <h3> <%= link_to "Profile", userparam_path(current_user.id) %> </h3>
   <% end %>
 
 
-  <%= link_to "Logout",  destroy_user_session_path, method: :delete %> |<br /> 
+ <h2 align="right"><%= link_to "Logout",  destroy_user_session_path, method: :delete %> </h2>
 <% else %>
    <%= link_to "Login", new_user_session_path %> |
    <%=link_to "Registration", new_user_registration_path%> |
