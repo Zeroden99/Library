@@ -7,7 +7,8 @@ class Book < ApplicationRecord
 
 
   serialize :libraries, JSON # If you use SQLite, add this line.
-  validates :name,:body,:libraries, presence: true
+  validates :name,:body,:libraries,:image, presence: true
   validates :name, length: 4..256
   validates :body, length: 8..256
+
 end

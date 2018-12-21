@@ -13,7 +13,7 @@
 <%= form_for @book, url: books_path do |f| %>
 
 
-  <%= f.file_field :image %>
+  <%= f.file_field :image %><br />
   <%= f.text_field :name %><br />
   <%= f.text_area :body, size: "60x12" %><br />
   <%= f.file_field :libraries, multiple: true %><br><br>
