@@ -20,7 +20,7 @@ class BooksController < ApplicationController
   end
   
   def show
-    @comments = @book.book_comments
+   
 
   end
   

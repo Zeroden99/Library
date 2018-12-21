@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  get 'comments/new'
-
-  get 'comments/edit'
-
-  get 'comments/show'
-
   get 'bookcomments/show'
 
   get 'userparams/new'

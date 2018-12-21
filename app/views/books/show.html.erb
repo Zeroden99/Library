@@ -2,15 +2,7 @@ User: <%= @book.user.email %><br />
 Name: <%= @book.name %><br />
 Body: <%= @book.body %><br />
 <%=image_tag@book.image.url(:medium) %><br />
-<p><%= link_to "Write Comment", new_book_comment_path(@book.id) %></p>
 
-<% @comments.each do |comment| %>
-   <p>
-    User <b><%= comment.user.userparam.name %></b> write: <br />
-    <%= comment.body %><br />
-   </p>
-<% end %>
- 
 <% @book.libraries.each do |b| %>
 
   <%= link_to "Download", b.url %>
