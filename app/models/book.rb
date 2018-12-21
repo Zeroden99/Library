@@ -10,5 +10,6 @@ class Book < ApplicationRecord
   validates :name,:body,:libraries,:image, presence: true
   validates :name, length: 4..256
   validates :body, length: 8..256
+  has_many :book_comments
 
 end
